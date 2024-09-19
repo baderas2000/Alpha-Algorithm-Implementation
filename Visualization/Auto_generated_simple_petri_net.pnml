@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="alpha_classic_net_1670220805.64581" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>alpha_classic_net_1670220805.64581</text>
+    </name>
+    <page id="n0">
+      <place id="end">
+        <name>
+          <text>end</text>
+        </name>
+      </place>
+      <place id="({'Task A'}, {'Task B'})">
+        <name>
+          <text>({'Task A'}, {'Task B'})</text>
+        </name>
+      </place>
+      <place id="start">
+        <name>
+          <text>start</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="({'Task D', 'Task C'}, {'Task E'})">
+        <name>
+          <text>({'Task D', 'Task C'}, {'Task E'})</text>
+        </name>
+      </place>
+      <place id="({'Task B'}, {'Task D', 'Task C'})">
+        <name>
+          <text>({'Task B'}, {'Task D', 'Task C'})</text>
+        </name>
+      </place>
+      <transition id="Task E">
+        <name>
+          <text>Task E</text>
+        </name>
+      </transition>
+      <transition id="Task B">
+        <name>
+          <text>Task B</text>
+        </name>
+      </transition>
+      <transition id="Task C">
+        <name>
+          <text>Task C</text>
+        </name>
+      </transition>
+      <transition id="Task A">
+        <name>
+          <text>Task A</text>
+        </name>
+      </transition>
+      <transition id="Task D">
+        <name>
+          <text>Task D</text>
+        </name>
+      </transition>
+      <arc id="139801816203712" source="Task B" target="({'Task B'}, {'Task D', 'Task C'})"/>
+      <arc id="139801816207264" source="Task D" target="({'Task D', 'Task C'}, {'Task E'})"/>
+      <arc id="139801816205344" source="Task C" target="({'Task D', 'Task C'}, {'Task E'})"/>
+      <arc id="139801816206208" source="({'Task D', 'Task C'}, {'Task E'})" target="Task E"/>
+      <arc id="139801742880336" source="start" target="Task A"/>
+      <arc id="139801742880528" source="Task E" target="end"/>
+      <arc id="139801816204336" source="({'Task A'}, {'Task B'})" target="Task B"/>
+      <arc id="139801816206736" source="Task A" target="({'Task A'}, {'Task B'})"/>
+      <arc id="139801816205296" source="({'Task B'}, {'Task D', 'Task C'})" target="Task D"/>
+      <arc id="139801816203472" source="({'Task B'}, {'Task D', 'Task C'})" target="Task C"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="end">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>
