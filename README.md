@@ -29,6 +29,3 @@ To run the code:
 - The team worked collectively without strict task separation.
 - Meetings were held regularly to learn, brainstorm, and implement the code together.
 
----
-
-Feel free to reach out for more details or troubleshooting.
